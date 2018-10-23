@@ -438,7 +438,7 @@ $secondary-color-hover: $secondary-color;
 $body-text-color: {{ settings.body-text-color }};
 $body-background-color: {{ settings.body-background-color }};
 $heading-text-color: {{ settings.heading-text-color }};
-$border-color: {{ settings.border-color }};
+$border-color: #54e8c5;
 
 $error-color: #e13333;
 $success-color: #5bef6b;
@@ -1300,7 +1300,7 @@ body {
   @include font($font-headings);
   display: block;
   font-size: $heading-font-size-3;
-  line-height: 1.5;
+  line-height: 3em;
   color: $heading-text-color;
 
   @include breakpoint(md){
@@ -1557,6 +1557,28 @@ body {
   }
 }
 
+.home-left-right-titles-preheading {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 28px!important;
+  color: #233069c4;
+  font-weight: 
+}
+
+.background-triangles {
+	background-image: url(https://static1.squarespace.com/static/5b50e24a4eddeceef3979f37/t/5b985c8d2b6a28301fa163bc/1536711827875/bgArtboard+16%401x.png)!important;
+      background-position: center!important;
+    background-size: cover!important;
+
+}
+
+.background-triangles-news {
+	background-image: url(https://static1.squarespace.com/static/5b50e24a4eddeceef3979f37/t/5b984f2289858397383e2a68/1536784998413/bgArtboard+13%401x.png)!important;
+      background-position: center!important;
+    background-size: cover!important;
+}
+
+
 /*! normalize.css v1.1.0 | MIT License | git.io/normalize */
 /*! normalize.css v1.1.0 | HTML5 Display Definitions | MIT License | git.io/normalize */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
@@ -1718,14 +1740,14 @@ body {
 /* Links */
 
 a {
-  color: $primary-color;
+  color: $white;
   text-decoration: none;
   -webkit-transition: all 0.2s $ease;
   transition: all 0.2s $ease;
 
   &:focus,
   &:hover {
-    color: $primary-color;
+    color: #233069;
   }
 
   &.disabled {
@@ -1805,6 +1827,8 @@ hr {
 p {
   margin: 0;
   padding: $gutter/2 0;
+  line-height: 32px!important;
+  font-size: 22px!important;
 }
 
 th,
@@ -1917,33 +1941,33 @@ table.mobile-layout {
   font-size: 12px;
   line-height: 22px;
   letter-spacing: 2px;
-  color: $primary-color;
+  color: #233069!important;
   text-align: center;
   text-transform: uppercase;
   vertical-align: top;
   cursor: pointer;
-  background-color: transparent;
-  border: 1px solid $primary-color;
+  background-color: #54e8c5!important;
+  border: 1px solid #54e8c5!important;
 
   @include breakpoint(sm) {
     text-align: center;
   }
 
   &:hover {
-    background: $primary-color;
-    border-color: $primary-color;
-    color: $white;
+    background: #9dd8ca!important;
+    border-color: #9dd8ca!important;
+    color: #233069!important;
   }
 
   &.secondary {
-    background: transparent;
-    border-color: $secondary-color;
-    color: $secondary-color;
+    background: #54e8c5!important;
+    border-color: #54e8c5!important;
+    color: #233069!important;
 
     &:hover {
-      background: $secondary-color;
-      border-color: $secondary-color;
-      color: $white;
+      background: #9dd8ca!important;
+      border-color: #9dd8ca!important;
+      color: #233069!important;
     }
 
     &.inverse {
@@ -4296,7 +4320,7 @@ input[type="button"].cart-shipping-calculate {
     width: 100%;
     padding: 15px;
     margin-top: 40px;
-    background-color: $body-background-color;
+    background-color: #233069!important;
   }
 
   .main-footer {
@@ -7075,6 +7099,7 @@ iframe {
   display: block;
   padding-right: $gutter;
   padding-left: $gutter;
+  background-color: #233069!important;
 
   &.has-borders {
     padding-top: $gutter * 2;
@@ -7869,7 +7894,7 @@ body {
   .showing-drawer.has-slideshow-full-window & { position: relative; }
 
   .showing-drawer & {
-    height: 100vh;
+    height: 80vh!important;
     overflow-y: auto;
     background-color: rgba($dark-color, 0.98) !important;
   }
@@ -9292,7 +9317,7 @@ $pxs-ab-line-height: 1.5 !default;
   }
 
   .has-slideshow-full-window & {
-    height: 100vh;
+    height: 80vh!important;
   };
 
   // Legacy selector to limit the slide's width to the content
@@ -9574,11 +9599,11 @@ $pxs-ab-line-height: 1.5 !default;
 .slide-text {
   @include transform(translate(-50%,-50%));
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 45%;
+  left: 58.5%;
   z-index: 1;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1600px;
 
   @include breakpoint(md) {
     max-width: 700px;
@@ -9657,7 +9682,8 @@ $pxs-ab-line-height: 1.5 !default;
 
   &.light {
     .slide-text-heading,
-    .slide-text-subheading {
+    .slide-text-subheading,
+    .slide-text-preheading {
       color: $white;
     }
   }
@@ -9701,17 +9727,20 @@ $pxs-ab-line-height: 1.5 !default;
 }
 
 .slide-text-heading {
-  font-size: $heading-font-size-1;
-  line-height: $heading-font-size-1 + 10;
+  font-size: $heading-font-size-1 + 20;
+  line-height: $heading-font-size-1 + 30;
+  text-shadow: rgba(0, 0, 0, 0.26) 0px 0.125rem 0.5rem;
 
   @include breakpoint(md) {
     font-size: $heading-font-size-2;
     line-height: $heading-font-size-2 + 10;
+    text-shadow: rgba(0, 0, 0, 0.26) 0px 0.125rem 0.5rem;
   }
 
   @include breakpoint(sm) {
     font-size: $heading-font-size-2-xs;
     line-height: $heading-font-size-2-xs + 10;
+    text-shadow: rgba(0, 0, 0, 0.26) 0px 0.125rem 0.5rem;
   }
 }
 
@@ -9721,6 +9750,7 @@ $pxs-ab-line-height: 1.5 !default;
   padding-bottom: 0;
   font-size: $heading-font-size-5;
   line-height: $heading-font-size-5 + 10;
+  text-shadow: rgba(0, 0, 0, 0.26) 0px 0.125rem 0.5rem;
 
   &:not(:first-child) {
     margin-top: $gutter-half;
@@ -9729,6 +9759,13 @@ $pxs-ab-line-height: 1.5 !default;
   @include breakpoint(md) {
     margin-top: 0;
   }
+}
+
+.slide-text-preheading {
+	text-transform: uppercase;
+  	line-height: 1.5em;
+  	font-size: 28px!important;
+  	text-shadow: rgba(0, 0, 0, 0.26) 0px 0.125rem 0.5rem;
 }
 
 .home-testimonials {
@@ -9829,6 +9866,8 @@ $pxs-ab-line-height: 1.5 !default;
     font-size: 14px;
     padding: 0;
     margin: 0;
+    line-height: 32px!important;
+    font-size: 22px!important;
   }
 }
 
@@ -10304,10 +10343,10 @@ $pxs-ab-line-height: 1.5 !default;
     font-size: 12px;
     line-height: 22px;
     letter-spacing: 2px;
-    color: $white;
+    color: #233069;
     text-transform: uppercase;
-    background-color: $primary-color;
-    border: 1px solid $primary-color;
+    background-color: #54e8c5;
+    border: 1px solid #54e8c5;
     border-radius: $button-height / 2;
 
     &:hover {
@@ -10762,7 +10801,7 @@ $pxs-ab-line-height: 1.5 !default;
 }
 
 $pxs-rich-text-breakpoint-tablet: $sm;
-$pxs-rich-text-border-color: $border-color;
+/* $pxs-rich-text-border-color: $border-color; */
 
 // Breakpoints
 $pxs-rich-text-breakpoint-tablet: 768px !default;
@@ -10776,13 +10815,15 @@ $pxs-rich-text-width-regular: 700px !default;
 $pxs-rich-text-width-wide: 900px !default;
 $pxs-rich-text-width-full-width: 100% !default;
 
-$pxs-rich-text-border-color: #000 !default;
-$pxs-rich-text-border: 1px solid $pxs-rich-text-border-color !default;
+$pxs-rich-text-border-color: transparent !default;
+$pxs-rich-text-border: 1px solid transparent !default;
 
 .pxs-rich-text {
-  max-width: 100%;
-  padding: ($pxs-rich-text-space-mobile * 3) $pxs-rich-text-gutter;
+  max-width: 100%!important;
+/*   padding: ($pxs-rich-text-space-mobile * 3) $pxs-rich-text-gutter; */
   margin: 0 auto;
+  background-color: #54e8c5!important;
+  
 
   @media (min-width: $pxs-rich-text-breakpoint-tablet) {
     padding-top: $pxs-rich-text-space-desktop * 3;
@@ -11045,6 +11086,8 @@ $pxs-map-heading-margin: 26px !default;
   p {
     margin: 0;
     text-align: center;
+    line-height: 32px!important;
+    font-size: 22px!important;
   }
 
   a {
